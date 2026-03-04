@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -13,6 +12,7 @@
       --link:#0b61a4;
       --line:#ececec;
       --bg:#ffffff;
+      --card:#ffffff;
     }
     *{ box-sizing:border-box; }
     body{
@@ -23,6 +23,7 @@
       line-height:1.6;
     }
 
+    /* Header */
     header{
       border-bottom:1px solid var(--line);
       background:#fff;
@@ -56,6 +57,7 @@
     a{ color:var(--link); text-decoration:none; }
     a:hover{ text-decoration:underline; }
 
+    /* Layout */
     .wrap{
       max-width:1100px;
       margin:0 auto;
@@ -66,6 +68,7 @@
       align-items:start;
     }
 
+    /* Left profile */
     .profile{
       position:sticky;
       top:78px;
@@ -104,8 +107,11 @@
       align-items:flex-start;
       margin:10px 0;
     }
-    .icon{ width:18px; text-align:center; opacity:.85; }
-
+    .icon{
+      width:18px;
+      text-align:center;
+      opacity:.85;
+    }
     .links{
       margin-top:14px;
       padding-top:14px;
@@ -121,38 +127,80 @@
     .links a span{ color:var(--muted); }
     .links a:hover span{ color:var(--link); }
 
-    .content h2{ font-size:1.6rem; margin:0 0 10px; }
+    /* Right content */
+    .content h2{
+      font-size:1.6rem;
+      margin:0 0 10px;
+    }
+    .subhead{
+      color:var(--muted);
+      margin:0 0 18px;
+    }
     .section{
       padding:0 0 26px;
       border-bottom:1px solid var(--line);
       margin-bottom:26px;
     }
     .section h3{
-      margin:0 0 10px;
+      margin:0 0 12px;
       font-size:1.2rem;
+      display:flex;
+      align-items:center;
+      gap:10px;
     }
 
-    .item{
+    /* Modern cards */
+    .card{
+      display:grid;
+      grid-template-columns: 220px 1fr;
+      gap:18px;
       border:1px solid var(--line);
-      border-radius:14px;
-      padding:14px 16px;
-      margin:14px 0;
-      background:#fff;
+      border-radius:16px;
+      padding:14px;
+      background:var(--card);
+      margin:16px 0;
     }
-    .itemhead{
+    .card img{
+      width:100%;
+      height:150px;
+      object-fit:cover;
+      border-radius:12px;
+      border:1px solid var(--line);
+      display:block;
+      background:#f6f6f6;
+    }
+    .card h4{
+      margin:0 0 6px 0;
+      font-size:1.08rem;
+    }
+    .meta-row{
       display:flex;
-      justify-content:space-between;
-      gap:12px;
       flex-wrap:wrap;
-      align-items:baseline;
-      margin-bottom:6px;
-    }
-    .when{
+      gap:10px 14px;
       color:var(--muted);
-      font-size:.95rem;
-      white-space:nowrap;
+      font-size:.92rem;
+      margin:0 0 10px;
     }
-    .muted{ color:var(--muted); margin:6px 0 0; }
+    .pill{
+      display:inline-block;
+      padding:2px 10px;
+      border:1px solid var(--line);
+      border-radius:999px;
+      font-size:.85rem;
+      color:var(--muted);
+      background:#fff;
+      margin-right:8px;
+      margin-top:6px;
+    }
+    .linksrow{
+      margin-top:10px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:14px;
+      font-weight:500;
+    }
+    .bullets{ margin:10px 0 0; padding-left:18px; }
+    .bullets li{ margin:6px 0; }
 
     @media (max-width: 900px){
       .wrap{ grid-template-columns: 1fr; }
@@ -166,6 +214,8 @@
         margin-bottom:22px;
       }
       .avatar{ margin:0 auto 12px; }
+      .card{ grid-template-columns: 1fr; }
+      .card img{ height:190px; }
     }
   </style>
 </head>
@@ -217,70 +267,160 @@
 
       <div class="section">
         <h2>Activities</h2>
-        <p class="muted">
-          Outreach, workshops, invited talks, service, and community engagement.
-          (Replace the placeholder items below with your real activities.)
-        </p>
+        <p class="subhead">Outreach, workforce development, institutional engagement, mentoring, and professional development.</p>
       </div>
 
+      <!-- Workforce Development -->
       <div class="section">
-        <h3>Outreach & Community Engagement</h3>
+        <h3>🏭 Workforce Development & Education</h3>
 
-        <div class="item">
-          <div class="itemhead">
-            <b>STEM Outreach Session / Demo (Title)</b>
-            <div class="when">Month Year</div>
+        <div class="card">
+          <img src="images/imade_curriculum.jpg" alt="IMaDE curriculum and workforce development">
+          <div>
+            <h4>Development of IMaDE’s Education and Workforce Training Structure</h4>
+            <div class="meta-row">
+              <span>University of Alabama • IMaDE Center</span>
+              <span class="pill">Industry 4.0</span>
+              <span class="pill">Digital Twins</span>
+              <span class="pill">Robotics & Automation</span>
+            </div>
+            <p>
+              Contributed to building the instructional and workforce-development infrastructure for the B.S. in Manufacturing Systems Engineering.
+              The initiative aligned the curriculum with Industry 4.0 priorities including automation, robotics, PLCs, digital twins, smart manufacturing, and data-driven engineering.
+            </p>
+            <ul class="bullets">
+              <li>Developed 15 modular courses, lab manuals, and digital-twin-enabled instructional materials.</li>
+              <li>Implemented experiential lab workflows connecting automation hardware with virtual manufacturing environments.</li>
+              <li>Supported partnerships with Mercedes-Benz U.S. International, EBZ SysTec, Intelitek, Learning Labs, Rockwell Automation, and TransfrVR.</li>
+            </ul>
           </div>
-          <div class="muted">Audience: high school students / community members • Short description of what you did and the impact.</div>
         </div>
 
-        <div class="item">
-          <div class="itemhead">
-            <b>Public Lecture / Lab Open House (Title)</b>
-            <div class="when">Month Year</div>
+        <div class="card">
+          <img src="images/smart_manufacturing_workshop.jpg" alt="Smart Manufacturing Systems teacher training workshop">
+          <div>
+            <h4>Smart Manufacturing Systems Teacher Training Workshop</h4>
+            <div class="meta-row">
+              <span>Alabama IMaDE Center • Two-day workshop</span>
+              <span class="pill">K–12 Educator Training</span>
+              <span class="pill">Hands-on Labs</span>
+            </div>
+            <p>
+              Organized and delivered a two-day Smart Manufacturing Systems workshop to support manufacturing education across Alabama.
+              The program introduced educators to robotics, PLCs, smart sensors, VR, and automated systems through lectures, lab tours, and hands-on sessions.
+            </p>
+            <ul class="bullets">
+              <li>Collaborators included Intelitek, Mercedes-Benz U.S. International, Alabama Robotics Technology Park, TransfrVR, and the Alabama Community College System.</li>
+              <li>Provided practical exposure and implementation resources for regional manufacturing programs.</li>
+            </ul>
           </div>
-          <div class="muted">One sentence about the talk/demo and the topic.</div>
         </div>
       </div>
 
+      <!-- Visibility / Outreach -->
       <div class="section">
-        <h3>Workshops & Training</h3>
+        <h3>📣 Visibility, Outreach, and Institutional Engagement</h3>
 
-        <div class="item">
-          <div class="itemhead">
-            <b>Workshop Name (e.g., ROS 2 / AI / HRI workshop)</b>
-            <div class="when">Month Year</div>
+        <div class="card">
+          <img src="images/brain_drone_race.jpg" alt="Brain–Drone Race outreach event">
+          <div>
+            <h4>Brain–Drone Race (LTU, in collaboration with the University of Alabama)</h4>
+            <div class="meta-row">
+              <span>Public-facing event • BCI + Robotics + AI</span>
+              <span class="pill">Experiential Learning</span>
+              <span class="pill">Outreach</span>
+            </div>
+            <p>
+              Coordinated and delivered LTU’s first Brain–Drone Race, adapted in collaboration with the University of Alabama and integrating brain–computer interfaces, robotics, and AI in a public-facing event.
+            </p>
+            <div class="linksrow">
+              <a href="https://www.youtube.com/shorts/QmNzUkDNoDc" target="_blank" rel="noopener noreferrer">YouTube</a>
+              <a href="https://www.instagram.com/reel/C56VrKnPfZl/?hl=en" target="_blank" rel="noopener noreferrer">Instagram</a>
+              <a href="https://www.linkedin.com/feed/update/urn:li:activity:7186809633024450560/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            </div>
           </div>
-          <div class="muted">Organizer / Location • 1 line on what you focused on.</div>
         </div>
 
-        <div class="item">
-          <div class="itemhead">
-            <b>Summer School / Short Course</b>
-            <div class="when">Month Year</div>
+        <div class="card">
+          <img src="images/automation_alley_roundtable.jpg" alt="Automation Alley robotics roundtable">
+          <div>
+            <h4>Robotics Roundtable Participant (Automation Alley)</h4>
+            <div class="meta-row">
+              <span>Regional robotics and automation roundtable</span>
+              <span class="pill">Workforce Readiness</span>
+              <span class="pill">Innovation Ecosystems</span>
+            </div>
+            <p>
+              Represented LTU at a regional roundtable with industry, academic, and economic development leaders, contributing to discussions on applied robotics, workforce readiness, and innovation ecosystems.
+            </p>
+            <div class="linksrow">
+              <a href="https://issuu.com/automationalley/docs/2024_0814_robotics_integr8pb" target="_blank" rel="noopener noreferrer">Event publication</a>
+            </div>
+            <ul class="bullets">
+              <li>Conducted lab demonstrations for prospective students and industry partners.</li>
+              <li>Supported campus recruitment and outreach through HERO Lab activities.</li>
+              <li>Collaborated with the LTU Centrepolis Accelerator on student innovation projects.</li>
+            </ul>
           </div>
-          <div class="muted">Topic • 1 line on key skills/areas.</div>
+        </div>
+
+        <div class="card">
+          <img src="images/placeholder_service.jpg" alt="Industrial Advisory Board presentation (add image later)">
+          <div>
+            <h4>Industrial Advisory Board Presentation (Brain–Drone Race)</h4>
+            <div class="meta-row">
+              <span>Industry engagement</span>
+              <span class="pill">Interdisciplinary Education</span>
+              <span class="pill">Skills Development</span>
+            </div>
+            <p>
+              Delivered a presentation to an Industrial Advisory Board highlighting the Brain–Drone Race initiative as a model for interdisciplinary education, industry-relevant skill development, and collaborative innovation.
+            </p>
+            <p class="subhead">Tip: upload an image as <b>images/placeholder_service.jpg</b> (or rename this to a real photo later).</p>
+          </div>
         </div>
       </div>
 
+      <!-- Mentoring -->
+      <div class="section">
+        <h3>🎓 Student Mentoring and Experiential Learning</h3>
+        <ul class="bullets">
+          <li>Supervised undergraduate and graduate research assistants.</li>
+          <li>Mentored students in EEG analysis, robotic autonomy, digital twins, and applied AI.</li>
+          <li>Led the Brain–Drone Race initiative integrating neuroscience, robotics, and competition-based learning.</li>
+          <li>Supported student participation in accelerator- and commercialization-focused projects.</li>
+        </ul>
+      </div>
+
+      <!-- Leadership & Service -->
+      <div class="section">
+        <h3>🏛️ Leadership and Service at LTU</h3>
+        <ul class="bullets">
+          <li>Undergraduate Coordinator, Department of Mechanical, Robotics, and Industrial Engineering.</li>
+          <li>Contributed to curriculum oversight and program coordination.</li>
+          <li>Served on a departmental research committee supporting recruitment and evaluation of a new faculty member.</li>
+          <li>Served on a master’s thesis research committee, contributing to thesis evaluation and student mentoring.</li>
+          <li>Participated in departmental and institutional service aligned with student success.</li>
+          <li>Participated in the College of Engineering Research Mentoring Workshop at LTU.</li>
+        </ul>
+      </div>
+
+      <!-- Professional Development -->
       <div class="section" style="border-bottom:none; margin-bottom:0; padding-bottom:0;">
-        <h3>Professional Service</h3>
-
-        <div class="item">
-          <div class="itemhead">
-            <b>Reviewer / Program Committee / Session Chair</b>
-            <div class="when">Year–Year</div>
-          </div>
-          <div class="muted">Journal/Conference name(s) • brief scope.</div>
-        </div>
-
-        <div class="item">
-          <div class="itemhead">
-            <b>Department/College Service</b>
-            <div class="when">Year–Year</div>
-          </div>
-          <div class="muted">Committee / role • short description.</div>
-        </div>
+        <h3>📚 Professional Development</h3>
+        <ul class="bullets">
+          <li>University of South Florida Sarasota-Manatee Campus Summer Grant Writing Workshop Program</li>
+          <li>College of Engineering Research Mentoring Workshop, Lawrence Technological University</li>
+          <li>NSF EPIIC Grant Faculty Professional Development Training Session</li>
+          <li>Engineering Unleashed Integrating Curriculum with EM (ICE) Workshop</li>
+          <li>The Dynamics of Fluid Interaction: Safe, Adaptive and Compliant Robot Intelligence Webinar</li>
+          <li>BCI & Neurotech Masterclass Malaysia 4.0</li>
+          <li>ManuTech Innovation Summit</li>
+          <li>IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)</li>
+          <li>ACM/IEEE International Conference on Human Robot Interaction</li>
+          <li>KEEN National Conference</li>
+          <li>Automate Show and Conference</li>
+        </ul>
       </div>
 
     </section>
