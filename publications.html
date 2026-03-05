@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Projects | Roya Salehzadeh</title>
+  <title>Publications | Roya Salehzadeh</title>
 
   <style>
     :root{
@@ -12,6 +12,7 @@
       --link:#0b61a4;
       --line:#ececec;
       --bg:#ffffff;
+      --card:#ffffff;
     }
     *{ box-sizing:border-box; }
     body{
@@ -22,6 +23,7 @@
       line-height:1.6;
     }
 
+    /* Top nav */
     header{
       border-bottom:1px solid var(--line);
       background:#fff;
@@ -56,6 +58,7 @@
     a{ color:var(--link); text-decoration:none; }
     a:hover{ text-decoration:underline; }
 
+    /* Layout */
     .wrap{
       max-width:1100px;
       margin:0 auto;
@@ -66,6 +69,7 @@
       align-items:start;
     }
 
+    /* Left profile card */
     .profile{
       position:sticky;
       top:78px;
@@ -104,8 +108,11 @@
       align-items:flex-start;
       margin:10px 0;
     }
-    .icon{ width:18px; text-align:center; opacity:.85; }
-
+    .icon{
+      width:18px;
+      text-align:center;
+      opacity:.85;
+    }
     .links{
       margin-top:14px;
       padding-top:14px;
@@ -121,6 +128,7 @@
     .links a span{ color:var(--muted); }
     .links a:hover span{ color:var(--link); }
 
+    /* Right content */
     .content h2{
       font-size:1.6rem;
       margin:0 0 10px;
@@ -130,23 +138,142 @@
       border-bottom:1px solid var(--line);
       margin-bottom:26px;
     }
+    .section h3{
+      margin:14px 0 10px;
+      font-size:1.2rem;
+    }
+    .muted{
+      color:var(--muted);
+      margin-top:6px;
+    }
 
+    /* Publication list */
+    .pubs{
+      margin:0;
+      padding-left:20px;
+    }
+    .pubs li{
+      margin:10px 0;
+    }
+    .pub-links{
+      color:var(--muted);
+      font-weight:500;
+      margin-left:6px;
+    }
+    .pub-links a{
+      margin-right:10px;
+      white-space:nowrap;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px){
+      .wrap{ grid-template-columns: 1fr; }
+      .profile{
+        position:relative;
+        top:auto;
+        border-right:none;
+        padding-right:0;
+        border-bottom:1px solid var(--line);
+        padding-bottom:22px;
+        margin-bottom:22px;
+      }
+      .avatar{ margin:0 auto 12px; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="topbar">
+      <a class="brand" href="index.html">Roya Salehzadeh</a>
+      <nav>
+        <a href="projects.html">Projects</a>
+        <a href="publications.html">Publications</a>
+        <a href="teaching.html">Teaching</a>
+        <a href="activities.html">Activities</a>
+        <a href="cv.html">CV</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+
+    <!-- LEFT PROFILE -->
+    <aside class="profile">
+      <img class="avatar" src="images/roya.jpg" alt="Roya Salehzadeh">
+
+      <p class="name">Roya Salehzadeh</p>
+
+      <p class="title">
+        Assistant Professor • Robotics • HRI • Learning-based Decision-Making
+      </p>
+
+      <ul class="meta">
+        <li><div class="icon">📍</div><div>Southfield, MI, USA</div></li>
+        <li><div class="icon">🏛️</div><div>Lawrence Technological University</div></li>
+      </ul>
+
+      <div class="links">
+        <a href="mailto:YOUR_EMAIL@ltu.edu"><div class="icon">✉️</div><span>Email</span></a>
+
+        <a href="https://scholar.google.com/citations?user=mg-GJgMAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">
+          <div class="icon">🎓</div><span>Google Scholar</span>
+        </a>
+
+        <a href="https://www.linkedin.com/in/roya-salehzadeh/" target="_blank" rel="noopener noreferrer">
+          <div class="icon">in</div><span>LinkedIn</span>
+        </a>
+
+        <a href="https://github.com/RoyaSalehzadeh" target="_blank" rel="noopener noreferrer">
+          <div class="icon">⌂</div><span>GitHub</span>
+        </a>
+      </div>
+    </aside>
+
+    <!-- RIGHT CONTENT -->
     <section class="content">
-      <div class="section" style="border-bottom:none;margin-bottom:0;padding-bottom:0;">
+
+      <div class="section">
         <h2>Publications</h2>
-        <p style="color:var(--muted);margin-top:0;">(Add your papers here. You can also link to Google Scholar.)</p>
+        <p class="muted">
+          Selected publications. For a complete list, see
+          <a href="https://scholar.google.com/citations?user=mg-GJgMAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>.
+        </p>
+      </div>
 
+      <div class="section">
         <h3>Journal Articles</h3>
-        <ol>
-          <li><b>Paper Title</b>. Authors. Venue, Year. <a href="#">PDF</a> • <a href="#">DOI</a></li>
-          <li><b>Paper Title</b>. Authors. Venue, Year. <a href="#">PDF</a> • <a href="#">DOI</a></li>
-        </ol>
-
-        <h3>Conference Papers</h3>
-        <ol>
-          <li><b>Paper Title</b>. Authors. Conference, Year. <a href="#">PDF</a></li>
+        <ol class="pubs">
+          <li>
+            <b>Paper Title</b>. Authors. <i>Journal</i>, Year.
+            <span class="pub-links">
+              <a href="#" target="_blank" rel="noopener noreferrer">PDF</a>
+              <a href="#" target="_blank" rel="noopener noreferrer">DOI</a>
+            </span>
+          </li>
+          <li>
+            <b>Paper Title</b>. Authors. <i>Journal</i>, Year.
+            <span class="pub-links">
+              <a href="#" target="_blank" rel="noopener noreferrer">PDF</a>
+              <a href="#" target="_blank" rel="noopener noreferrer">DOI</a>
+            </span>
+          </li>
         </ol>
       </div>
+
+      <div class="section" style="border-bottom:none;margin-bottom:0;padding-bottom:0;">
+        <h3>Conference Papers</h3>
+        <ol class="pubs">
+          <li>
+            <b>Paper Title</b>. Authors. <i>Conference</i>, Year.
+            <span class="pub-links">
+              <a href="#" target="_blank" rel="noopener noreferrer">PDF</a>
+              <a href="#" target="_blank" rel="noopener noreferrer">DOI</a>
+            </span>
+          </li>
+        </ol>
+      </div>
+
     </section>
   </main>
 </body>
