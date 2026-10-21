@@ -272,3 +272,4 @@ p { margin: 0 0 14px; }
 .pi-details .plain li { font-size: 0.94rem; margin-bottom: 6px; }
 .pi-details .wide { grid-column: 1 / -1; }
 @media (max-width: 860px) { .pi-details { grid-template-columns: 1fr; } }
+.project.noimg { grid-template-columns: 1fr; }
