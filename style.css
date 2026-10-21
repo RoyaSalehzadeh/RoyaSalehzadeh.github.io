@@ -273,3 +273,4 @@ p { margin: 0 0 14px; }
 .pi-details .wide { grid-column: 1 / -1; }
 @media (max-width: 860px) { .pi-details { grid-template-columns: 1fr; } }
 .project.noimg { grid-template-columns: 1fr; }
+.project img.fit { object-fit: contain; background: #fff; border: 1px solid var(--line); padding: 6px; }
