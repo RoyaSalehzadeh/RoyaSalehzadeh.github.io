@@ -1,424 +1,161 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Activities | Roya Salehzadeh</title>
-
-  <style>
-    :root{
-      --text:#222;
-      --muted:#666;
-      --link:#0b61a4;
-      --line:#ececec;
-      --bg:#ffffff;
-      --card:#ffffff;
-    }
-    *{ box-sizing:border-box; }
-    body{
-      margin:0;
-      background:var(--bg);
-      color:var(--text);
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      line-height:1.6;
-    }
-
-    /* Header */
-    header{
-      border-bottom:1px solid var(--line);
-      background:#fff;
-      position:sticky;
-      top:0;
-      z-index:10;
-    }
-    .topbar{
-      max-width:1100px;
-      margin:0 auto;
-      padding:14px 18px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:16px;
-    }
-    .brand{
-      font-weight:650;
-      letter-spacing:.2px;
-      text-decoration:none;
-      color:var(--text);
-      white-space:nowrap;
-    }
-    nav a{
-      color:var(--muted);
-      text-decoration:none;
-      margin-left:18px;
-      font-weight:500;
-    }
-    nav a:hover{ color:var(--link); }
-    a{ color:var(--link); text-decoration:none; }
-    a:hover{ text-decoration:underline; }
-
-    /* Layout */
-    .wrap{
-      max-width:1100px;
-      margin:0 auto;
-      padding:28px 18px 60px;
-      display:grid;
-      grid-template-columns: 280px 1fr;
-      gap:34px;
-      align-items:start;
-    }
-
-    /* Left profile */
-    .profile{
-      position:sticky;
-      top:78px;
-      border-right:1px solid var(--line);
-      padding-right:28px;
-    }
-    .avatar{
-      width:190px;
-      height:190px;
-      border-radius:50%;
-      object-fit:cover;
-      display:block;
-      margin:8px 0 14px;
-      border:6px solid #f4f4f4;
-    }
-    .name{
-      font-size:1.25rem;
-      font-weight:700;
-      margin:0;
-    }
-    .title{
-      margin:6px 0 14px;
-      color:var(--muted);
-      font-size:.95rem;
-    }
-    .meta{
-      margin:14px 0 0;
-      padding:0;
-      list-style:none;
-      color:var(--muted);
-      font-size:.95rem;
-    }
-    .meta li{
-      display:flex;
-      gap:10px;
-      align-items:flex-start;
-      margin:10px 0;
-    }
-    .icon{
-      width:18px;
-      text-align:center;
-      opacity:.85;
-    }
-    .links{
-      margin-top:14px;
-      padding-top:14px;
-      border-top:1px solid var(--line);
-    }
-    .links a{
-      display:flex;
-      align-items:center;
-      gap:10px;
-      margin:10px 0;
-      color:var(--text);
-    }
-    .links a span{ color:var(--muted); }
-    .links a:hover span{ color:var(--link); }
-
-    /* Right content */
-    .content h2{
-      font-size:1.6rem;
-      margin:0 0 10px;
-    }
-    .subhead{
-      color:var(--muted);
-      margin:0 0 18px;
-    }
-    .section{
-      padding:0 0 26px;
-      border-bottom:1px solid var(--line);
-      margin-bottom:26px;
-    }
-    .section h3{
-      margin:0 0 12px;
-      font-size:1.2rem;
-      display:flex;
-      align-items:center;
-      gap:10px;
-    }
-
-    /* Modern cards */
-    .card{
-      display:grid;
-      grid-template-columns: 220px 1fr;
-      gap:18px;
-      border:1px solid var(--line);
-      border-radius:16px;
-      padding:14px;
-      background:var(--card);
-      margin:16px 0;
-    }
-    .card img{
-      width:100%;
-      height:150px;
-      object-fit:cover;
-      border-radius:12px;
-      border:1px solid var(--line);
-      display:block;
-      background:#f6f6f6;
-    }
-    .card h4{
-      margin:0 0 6px 0;
-      font-size:1.08rem;
-    }
-    .meta-row{
-      display:flex;
-      flex-wrap:wrap;
-      gap:10px 14px;
-      color:var(--muted);
-      font-size:.92rem;
-      margin:0 0 10px;
-    }
-    .pill{
-      display:inline-block;
-      padding:2px 10px;
-      border:1px solid var(--line);
-      border-radius:999px;
-      font-size:.85rem;
-      color:var(--muted);
-      background:#fff;
-      margin-right:8px;
-      margin-top:6px;
-    }
-    .linksrow{
-      margin-top:10px;
-      display:flex;
-      flex-wrap:wrap;
-      gap:14px;
-      font-weight:500;
-    }
-    .bullets{ margin:10px 0 0; padding-left:18px; }
-    .bullets li{ margin:6px 0; }
-
-    @media (max-width: 900px){
-      .wrap{ grid-template-columns: 1fr; }
-      .profile{
-        position:relative;
-        top:auto;
-        border-right:none;
-        padding-right:0;
-        border-bottom:1px solid var(--line);
-        padding-bottom:22px;
-        margin-bottom:22px;
-      }
-      .avatar{ margin:0 auto 12px; }
-      .card{ grid-template-columns: 1fr; }
-      .card img{ height:190px; }
-    }
-  </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Service and Outreach | Roya Salehzadeh</title>
+  <meta name="description" content="Professional service, outreach, and mentoring.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-  <header>
-    <div class="topbar">
-      <a class="brand" href="index.html">Roya Salehzadeh</a>
-      <nav>
-        <a href="projects.html">Projects</a>
+  <header class="site-header">
+    <div class="bar">
+      <a class="brand" href="index.html"><strong>Roya Salehzadeh</strong><span>Texas State University</span></a>
+      <nav class="nav" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Research</a>
+        <a href="team.html">Team</a>
         <a href="publications.html">Publications</a>
         <a href="teaching.html">Teaching</a>
-        <a href="activities.html">Activities</a>
+        <a href="activities.html" aria-current="page">Service</a>
         <a href="cv.html">CV</a>
       </nav>
     </div>
   </header>
 
-  <main class="wrap">
+  <main>
+    <h1 class="page-title">Service and Outreach</h1>
+    <p class="lede">Professional service, outreach, workforce development, mentoring, and recognition.</p>
 
-    <!-- LEFT PROFILE -->
-    <aside class="profile">
-      <img class="avatar" src="images/roya.jpg" alt="Roya Salehzadeh">
-
-      <p class="name">Roya Salehzadeh</p>
-      <p class="title">Assistant Professor • Robotics • HRI • Learning-based Decision-Making</p>
-
-      <ul class="meta">
-        <li><div class="icon">📍</div><div>Southfield, MI, USA</div></li>
-        <li><div class="icon">🏛️</div><div>Lawrence Technological University</div></li>
+    <section>
+      <h2>Professional service</h2>
+      <ul class="plain">
+        <li>Panelist, National Science Foundation (NSF)</li>
+        <li>Reviewer, ACM/IEEE International Conference on Human-Robot Interaction (HRI)</li>
+        <li>Reviewer, ACM CHI Conference on Human Factors in Computing Systems (CHI)</li>
+        <li>Reviewer, <i>ACM Transactions on Human-Robot Interaction</i></li>
+        <li>Reviewer, <i>IEEE Robotics and Automation Letters</i></li>
+        <li>Reviewer, <i>Computers &amp; Education</i></li>
       </ul>
+    </section>
 
-      <div class="links">
-        <a href="mailto:YOUR_EMAIL@ltu.edu"><div class="icon">✉️</div><span>Email</span></a>
-        <a href="https://scholar.google.com/citations?user=mg-GJgMAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">
-          <div class="icon">🎓</div><span>Google Scholar</span>
-        </a>
-        <a href="https://www.linkedin.com/in/roya-salehzadeh/" target="_blank" rel="noopener noreferrer">
-          <div class="icon">in</div><span>LinkedIn</span>
-        </a>
-        <a href="https://roboteo.ai/" target="_blank" rel="noopener noreferrer"><div class="icon">⌂</div><span>Roboteo</span></a>
-          <div class="icon">⌂</div><span>GitHub</span>
-        </a>
-      </div>
-    </aside>
+    <section>
+      <h2>Institutional service</h2>
+      <ul class="dated">
+        <li><span>Undergraduate Coordinator, Department of Mechanical, Robotics, and Industrial Engineering, Lawrence Technological University</span><span class="when">2025&ndash;2026</span></li>
+        <li><span>Faculty Advisor, LTU Centrepolis Accelerator</span><span class="when">2025&ndash;2026</span></li>
+        <li><span>Departmental faculty search committee, Lawrence Technological University</span><span class="when"></span></li>
+        <li><span>Master&rsquo;s thesis committee member, Lawrence Technological University</span><span class="when"></span></li>
+      </ul>
+    </section>
 
-    <!-- RIGHT CONTENT -->
-    <section class="content">
+    <section>
+      <h2>Outreach and engagement</h2>
 
-      <div class="section">
-        <h2>Activities</h2>
-        <p class="subhead">Outreach, workforce development, institutional engagement, mentoring, and professional development.</p>
-      </div>
-
-      <!-- Workforce Development -->
-      <div class="section">
-        <h3>🏭 Workforce Development & Education</h3>
-
-        <div class="card">
-          <img src="images/imade_curriculum.jpg" alt="IMaDE curriculum and workforce development">
-          <div>
-            <h4>Development of IMaDE’s Education and Workforce Training Structure</h4>
-            <div class="meta-row">
-              <span>University of Alabama • IMaDE Center</span>
-              <span class="pill">Industry 4.0</span>
-              <span class="pill">Digital Twins</span>
-              <span class="pill">Robotics & Automation</span>
-            </div>
-            <p>
-              Contributed to building the instructional and workforce-development infrastructure for the B.S. in Manufacturing Systems Engineering.
-              The initiative aligned the curriculum with Industry 4.0 priorities including automation, robotics, PLCs, digital twins, smart manufacturing, and data-driven engineering.
-            </p>
-            <ul class="bullets">
-              <li>Developed 15 modular courses, lab manuals, and digital-twin-enabled instructional materials.</li>
-              <li>Implemented experiential lab workflows connecting automation hardware with virtual manufacturing environments.</li>
-              <li>Supported partnerships with Mercedes-Benz U.S. International, EBZ SysTec, Intelitek, Learning Labs, Rockwell Automation, and TransfrVR.</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="card">
-          <img src="images/smart_manufacturing_workshop.jpg" alt="Smart Manufacturing Systems teacher training workshop">
-          <div>
-            <h4>Smart Manufacturing Systems Teacher Training Workshop</h4>
-            <div class="meta-row">
-              <span>Alabama IMaDE Center • Two-day workshop</span>
-              <span class="pill">K–12 Educator Training</span>
-              <span class="pill">Hands-on Labs</span>
-            </div>
-            <p>
-              Organized and delivered a two-day Smart Manufacturing Systems workshop to support manufacturing education across Alabama.
-              The program introduced educators to robotics, PLCs, smart sensors, VR, and automated systems through lectures, lab tours, and hands-on sessions.
-            </p>
-            <ul class="bullets">
-              <li>Collaborators included Intelitek, Mercedes-Benz U.S. International, Alabama Robotics Technology Park, TransfrVR, and the Alabama Community College System.</li>
-              <li>Provided practical exposure and implementation resources for regional manufacturing programs.</li>
-            </ul>
+      <div class="entry noimg">
+        <div>
+          <h3>Brain-Drone Race</h3>
+          <p class="where">Lawrence Technological University, in collaboration with The University of Alabama</p>
+          <p>
+            Coordinated and delivered LTU&rsquo;s first Brain-Drone Race, a public event in which participants fly drones
+            using brain-computer interfaces, bringing together neuroscience, robotics, and AI. The initiative was later
+            presented to the department&rsquo;s Industrial Advisory Board as a model for interdisciplinary,
+            industry-relevant education.
+          </p>
+          <div class="links-row">
+            <a href="https://www.youtube.com/shorts/QmNzUkDNoDc" target="_blank" rel="noopener noreferrer">YouTube</a>
+            <a href="https://www.instagram.com/reel/C56VrKnPfZl/?hl=en" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a href="https://www.linkedin.com/feed/update/urn:li:activity:7186809633024450560/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
           </div>
         </div>
       </div>
 
-      <!-- Visibility / Outreach -->
-      <div class="section">
-        <h3>📣 Visibility, Outreach, and Institutional Engagement</h3>
-
-        <div class="card">
-          <img src="images/brain_drone_race.jpg" alt="Brain–Drone Race outreach event">
-          <div>
-            <h4>Brain–Drone Race (LTU, in collaboration with the University of Alabama)</h4>
-            <div class="meta-row">
-              <span>Public-facing event • BCI + Robotics + AI</span>
-              <span class="pill">Experiential Learning</span>
-              <span class="pill">Outreach</span>
-            </div>
-            <p>
-              Coordinated and delivered LTU’s first Brain–Drone Race, adapted in collaboration with the University of Alabama and integrating brain–computer interfaces, robotics, and AI in a public-facing event.
-            </p>
-            <div class="linksrow">
-              <a href="https://www.youtube.com/shorts/QmNzUkDNoDc" target="_blank" rel="noopener noreferrer">YouTube</a>
-              <a href="https://www.instagram.com/reel/C56VrKnPfZl/?hl=en" target="_blank" rel="noopener noreferrer">Instagram</a>
-              <a href="https://www.linkedin.com/feed/update/urn:li:activity:7186809633024450560/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="card">
-          <img src="images/automation Alley.jpg" alt="Automation Alley robotics roundtable">
-          <div>
-            <h4>Robotics Roundtable Participant (Automation Alley)</h4>
-            <div class="meta-row">
-              <span>Regional robotics and automation roundtable</span>
-              <span class="pill">Workforce Readiness</span>
-              <span class="pill">Innovation Ecosystems</span>
-            </div>
-            <p>
-              Represented LTU at a regional roundtable with industry, academic, and economic development leaders, contributing to discussions on applied robotics, workforce readiness, and innovation ecosystems.
-            </p>
-            <div class="linksrow">
-              <a href="https://issuu.com/automationalley/docs/2024_0814_robotics_integr8pb" target="_blank" rel="noopener noreferrer">Event publication</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="card">
-          <img src="images/placeholder_service.jpg" alt="Industrial Advisory Board presentation (add image later)">
-          <div>
-            <h4>Industrial Advisory Board Presentation (Brain–Drone Race)</h4>
-            <div class="meta-row">
-              <span>Industry engagement</span>
-              <span class="pill">Interdisciplinary Education</span>
-              <span class="pill">Skills Development</span>
-            </div>
-            <p>
-              Delivered a presentation to an Industrial Advisory Board highlighting the Brain–Drone Race initiative as a model for interdisciplinary education, industry-relevant skill development, and collaborative innovation.
-            </p>
-            <p class="subhead">Tip: upload an image as <b>images/placeholder_service.jpg</b> (or rename this to a real photo later).</p>
+      <div class="entry">
+        <img src="images/automation-alley.jpg" alt="Automation Alley robotics roundtable" loading="lazy">
+        <div>
+          <h3>Robotics Roundtable, Automation Alley</h3>
+          <p class="where">Regional robotics and automation roundtable</p>
+          <p>
+            Represented LTU at a regional roundtable with industry, academic, and economic development leaders,
+            contributing to discussions on applied robotics, workforce readiness, and innovation ecosystems.
+          </p>
+          <div class="links-row">
+            <a href="https://issuu.com/automationalley/docs/2024_0814_robotics_integr8pb" target="_blank" rel="noopener noreferrer">Event publication</a>
           </div>
         </div>
       </div>
 
-      <!-- Mentoring -->
-      <div class="section">
-        <h3>🎓 Student Mentoring and Experiential Learning</h3>
-        <ul class="bullets">
-          <li>Supervised undergraduate and graduate research assistants.</li>
-          <li>Mentored students in EEG analysis, robotic autonomy, digital twins, and applied AI.</li>
-          <li>Led the Brain–Drone Race initiative integrating neuroscience, robotics, and competition-based learning.</li>
-          <li>Supported student participation in accelerator- and commercialization-focused projects.</li>
-        </ul>
+      <div class="entry noimg">
+        <div>
+          <h3>Education and Workforce Training Structure, Alabama IMaDE Center</h3>
+          <p class="where">The University of Alabama</p>
+          <p>
+            Helped build the instructional and workforce-development infrastructure for the B.S. in Manufacturing Systems
+            Engineering, aligning the curriculum with automation, robotics, PLCs, digital twins, and smart manufacturing.
+          </p>
+          <ul>
+            <li>Developed 15 modular courses, lab manuals, and digital-twin-enabled instructional materials.</li>
+            <li>Implemented lab workflows connecting automation hardware with virtual manufacturing environments.</li>
+            <li>Supported partnerships with Mercedes-Benz U.S. International, Rockwell Automation, EBZ SysTec, Intelitek, Learning Labs, and TransfrVR.</li>
+          </ul>
+        </div>
       </div>
 
-      <!-- Leadership & Service -->
-      <div class="section">
-        <h3>🏛️ Leadership and Service at LTU</h3>
-        <ul class="bullets">
-          <li>Undergraduate Coordinator, Department of Mechanical, Robotics, and Industrial Engineering.</li>
-          <li>Contributed to curriculum oversight and program coordination.</li>
-          <li>Served on a departmental research committee supporting recruitment and evaluation of a new faculty member.</li>
-          <li>Served on a master’s thesis research committee, contributing to thesis evaluation and student mentoring.</li>
-          <li>Participated in departmental and institutional service aligned with student success.</li>
-          <li>Participated in the College of Engineering Research Mentoring Workshop at LTU.</li>
-        </ul>
+      <div class="entry noimg">
+        <div>
+          <h3>Smart Manufacturing Systems Teacher Training Workshop</h3>
+          <p class="where">Alabama IMaDE Center, two-day workshop</p>
+          <p>
+            Organized and delivered a two-day workshop introducing educators to robotics, PLCs, smart sensors, VR, and
+            automated systems through lectures, lab tours, and hands-on sessions, with Intelitek, Mercedes-Benz U.S.
+            International, Alabama Robotics Technology Park, TransfrVR, and the Alabama Community College System.
+          </p>
+        </div>
       </div>
+    </section>
 
-      <!-- Professional Development -->
-      <div class="section" style="border-bottom:none; margin-bottom:0; padding-bottom:0;">
-        <h3>📚 Professional Development</h3>
-        <ul class="bullets">
-          <li>University of South Florida Sarasota-Manatee Campus Summer Grant Writing Workshop Program</li>
-          <li>College of Engineering Research Mentoring Workshop, Lawrence Technological University</li>
-          <li>NSF EPIIC Grant Faculty Professional Development Training Session</li>
-          <li>Engineering Unleashed Integrating Curriculum with EM (ICE) Workshop</li>
-          <li>The Dynamics of Fluid Interaction: Safe, Adaptive and Compliant Robot Intelligence Webinar</li>
-          <li>BCI & Neurotech Masterclass Malaysia 4.0</li>
-          <li>ManuTech Innovation Summit</li>
-          <li>IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)</li>
-          <li>ACM/IEEE International Conference on Human Robot Interaction</li>
-          <li>KEEN National Conference</li>
-          <li>Automate Show and Conference</li>
-        </ul>
-      </div>
+    <section>
+      <h2>Mentoring</h2>
+      <ul class="plain">
+        <li>Supervised undergraduate and graduate research assistants in EEG analysis, robotic autonomy, digital twins, and applied AI.</li>
+        <li>Mentored undergraduate students on EEG signal analysis and drone control, leading to the first Brain-Drone Race at LTU.</li>
+        <li>Mentored student teams on micro-drone and digital-manufacturing projects through the LTU Centrepolis Accelerator.</li>
+        <li>Guided capstone and course project teams in robotics and mechatronics.</li>
+      </ul>
+    </section>
 
+    <section>
+      <h2>Awards and honors</h2>
+      <ul class="dated">
+        <li><span>Outstanding Teaching Award, Department of Mechanical Engineering, The University of Alabama</span><span class="when">2022</span></li>
+        <li><span>Public Engagement Learning Community Program Award, The University of Alabama</span><span class="when">2022</span></li>
+        <li><span>ASME IMECE NSF Student Travel Grant</span><span class="when">2022</span></li>
+        <li><span>Semi-Finalist, 3-Minute Thesis Competition, The University of Alabama</span><span class="when">2022</span></li>
+        <li><span>Graduate Council Fellowship, The University of Alabama</span><span class="when">2019</span></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Professional development</h2>
+      <ul class="plain">
+        <li>Summer Grant Writing Workshop Program, University of South Florida Sarasota-Manatee</li>
+        <li>College of Engineering Research Mentoring Workshop, Lawrence Technological University</li>
+        <li>NSF EPIIC Grant Faculty Professional Development Training</li>
+        <li>Engineering Unleashed Integrating Curriculum with EM (ICE) Workshop</li>
+        <li>BCI &amp; Neurotech Masterclass, Malaysia 4.0</li>
+      </ul>
+      <p class="muted small" style="margin-top:14px">Memberships: IEEE, ACM, ASME, Society of Women Engineers (SWE).</p>
     </section>
   </main>
+
+  <footer class="site-footer">
+    <div class="bar">
+      <span>&copy; 2026 Roya Salehzadeh &middot; Ingram School of Engineering, Texas State University</span>
+      <a href="mailto:azo29@txstate.edu">azo29@txstate.edu</a>
+    </div>
+  </footer>
 </body>
 </html>
