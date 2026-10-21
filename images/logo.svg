@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-label="HCRN Lab logo">
+  <circle cx="80" cy="80" r="64" fill="none" stroke="#501214" stroke-width="7"/>
+  <line x1="80" y1="16" x2="80" y2="144" stroke="#501214" stroke-width="5"/>
+  <path d="M34 58 C48 46 60 62 72 52" fill="none" stroke="#501214" stroke-width="6" stroke-linecap="round"/>
+  <path d="M26 84 C42 72 58 92 72 80" fill="none" stroke="#501214" stroke-width="6" stroke-linecap="round"/>
+  <path d="M36 110 C50 98 60 116 72 106" fill="none" stroke="#501214" stroke-width="6" stroke-linecap="round"/>
+  <path d="M88 56 H110 V46" fill="none" stroke="#8D734A" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="110" cy="40" r="7" fill="#8D734A"/>
+  <path d="M88 80 H124" fill="none" stroke="#8D734A" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="130" cy="80" r="7" fill="#8D734A"/>
+  <path d="M88 104 H106 V114" fill="none" stroke="#8D734A" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="106" cy="120" r="7" fill="#8D734A"/>
+</svg>
